@@ -17,7 +17,6 @@ function App() {
       sx={{minHeight:"100vh", background: "linear-gradient(rgba(215, 199, 244, 0.2), rgba(151, 133, 186, 0.2))" }}
     >
        <Grid
-        item
         size={{ xs: 12, md: 2.5 }}
         sx={{
           bgcolor: "white",
@@ -36,7 +35,7 @@ function App() {
       >
         <Sidebar setChat={setChat} Close={() => setIsOpen(false)} />
       </Grid>
-      <Grid item size={{xs:12,md:9.5}}>
+      <Grid size={{xs:12,md:9.5}}>
         <Stack spacing={2} m={2} direction={'row'} alignItems={'center'}>
           {isMobile&&(
             <MenuIcon onClick={() => setIsOpen((prev)=>!prev)} />
