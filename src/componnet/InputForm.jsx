@@ -18,7 +18,7 @@ const InputForm = ({ getResponse,chat,setChat }) => {
   const handleSave=()=>{
     const prevChat=JSON.parse(localStorage.getItem('chat')||'[]');
     const date=new Date();
-    JSON.stringify({chat,date:date},...prevChat);
+    localStorage.setItem('chat',JSON.stringify([{chat,date:date},...prevChat]));
     setChat([]);
     setOpen(true);
   }
