@@ -41,14 +41,15 @@ function App() {
       >
         <Sidebar setChat={setChat} Close={() => setIsOpen(false)} />
       </Grid>
-
       <Grid size={{ xs: 12, md: 9.5 }} sx={{ height: "100vh" }}>
         <Stack spacing={2} m={2} direction={"row"} alignItems={"center"}>
           {isMobile && <MenuIcon onClick={() => setIsOpen((prev) => !prev)} />}
           <Link to={"/"} style={{ textDecoration: "none" }}>
-            <Typography color="#9785BA" fontWeight={700} fontSize={28}>
+          <header>
+            <Typography component={'h1'} color="#9785BA" fontWeight={700} fontSize={28}>
               Bot AI
             </Typography>
+            </header>
           </Link>
         </Stack>
         <Stack
@@ -57,6 +58,7 @@ function App() {
             overflow: "hidden",
           }}
         >
+          
           <Outlet context={{ chat: chat, setChat: setChat }} />
         </Stack>
       </Grid>
