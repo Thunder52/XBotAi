@@ -29,7 +29,7 @@ const InputForm = ({ getResponse,chat,setChat }) => {
         <TextField
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Message Bot AI…"
+          placeholder="Message Bot AI..."
           inputRef={inputRef}
           fullWidth
           required
